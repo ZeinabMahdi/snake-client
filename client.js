@@ -1,9 +1,10 @@
 // establishes a connection with the game server
 const net = require("net");
+const { IP, PORT } = require("./constants");
 const connect = function(data) {
   const conn = net.createConnection({
-    host: "165.227.47.243",
-    port: 50541
+    host: IP,
+    port: PORT
   });
 
   let callback = "Move: up";
