@@ -7,22 +7,15 @@ const connect = function(data) {
     port: PORT
   });
 
-  let callback = "Move: up";
-  // let moveRight = 'Move: right';
-  // let movedDown = 'Move: down';
-  // let moveLeft = 'Move: left';
-
-
-
   conn.setEncoding("utf8");
 
   conn.on('connect', () => {
     console.log("Successfully connected to game server!");
     conn.write("Name: ZZI");
-    conn.write("Move: up");
-    setInterval(() => conn.write("Move: up"), 500);
-    setInterval(() => conn.write("Move: left"), 200);
-    setInterval(() => conn.write("Move: down"), 400);
+    // conn.write("Move: up");
+    // setInterval(() => conn.write("Move: up"), 500);
+    // setInterval(() => conn.write("Move: left"), 200);
+    // setInterval(() => conn.write("Move: down"), 400);
   });
 
   conn.on('data', (data) => {
