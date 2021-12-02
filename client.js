@@ -22,6 +22,7 @@ const connect = function(data) {
     conn.write("Move: up");
     setInterval(() => conn.write("Move: up"), 500);
     setInterval(() => conn.write("Move: left"), 200);
+    setInterval(() => conn.write("Move: down"), 400);
   });
 
   conn.on('data', (data) => {
