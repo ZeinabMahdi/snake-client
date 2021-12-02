@@ -24,7 +24,7 @@ const handleUserInput = function(input) {
   } else if (input === 'D' || input === 'd') {
     connection.write("Move: right");
   } else {
-    console.log(`Say: ${input}`);
+    connection.write(`Say: wow this works`);
   }
 };
 
